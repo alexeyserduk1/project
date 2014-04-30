@@ -12,7 +12,7 @@
  *= require_tree .
  */
 body {
-	 background-image: url('2.jpg');
+	 background-image: url("img\2.jpg");
 }
 
 .row {

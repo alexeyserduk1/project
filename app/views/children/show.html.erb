@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @child.name %>
+</p>
+
+<p>
+  <b>Surname:</b>
+  <%= @child.surname %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @child.age %>
+</p>
+
+<p>
+  <b>Mother:</b>
+  <%= @child.mother.name %>
+</p>
+
+
+<button type="button" class="btn btn-primary"><%= link_to 'Edit', edit_child_path(@child) %></button>
+<button type="button" class="btn btn-info"><%= link_to 'Back', children_path %></button>
+

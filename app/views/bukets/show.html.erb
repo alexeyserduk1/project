@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>flower:</b>
+  <%= @buket.flower %>
+</p>
+
+<p>
+  <b>quantity:</b>
+  <%= @buket.quantity %>
+</p>
+
+<p>
+  <b>prise:</b>
+  <%= @buket.prise %>
+</p>
+
+
+<button type="button" class="btn btn-info"><%= link_to 'Edit', edit_buket_path(@buket) %></button>
+
+<button type="button" class="btn btn-success"><%= link_to 'Back', bukets_path %></button>
+<button type="button" class="btn btn-danger" id = "show">show buket</button>
+<script>
+		$("#show").on("click", function(){
+			if ((<%= @many %>) >100)
+			{
+				alert("Nice buket");
+			}
+		else 
+			{
+				alert("Bad buket");
+			}
+		});
+</script>

@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @mother.name %>
+</p>
+
+<p>
+  <b>Surname:</b>
+  <%= @mother.surname %>
+</p>
+
+<p>
+  <b>Job:</b>
+  <%= @mother.job %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @mother.age %>
+</p>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Surname</th>
+    <th>Age</th>
+  </tr>
+
+<% @children.each do |child| %>
+  
+  <tr>
+    <td><%= child.name %></td>
+    <td><%= child.surname %></td>
+    <td><%= child.age %></td>
+   </tr>
+<% end %>
+</table>
+
+<button type="button" class="btn btn-primary"><%= link_to 'Edit', edit_mother_path(@mother) %> </button>
+<button type="button" class="btn btn-success"><%= link_to 'Add Child', new_child_path(:mother_id => @mother.id) %></button>
+<button type="button" class="btn btn-info"><%= link_to 'Back', mothers_path %>
+</button>

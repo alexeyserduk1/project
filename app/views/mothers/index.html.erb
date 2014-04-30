@@ -1,0 +1,30 @@
+<h1>Listing mothers</h1>
+
+<table class='table table-striped'>
+  <tr>
+    <th>Name</th>
+    <th>Surname</th>
+    <th>Job</th>
+    <th>Age</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @mothers.each do |mother| %>
+  <tr>
+    <td><%= mother.name %></td>
+    <td><%= mother.surname %></td>
+    <td><%= mother.job %></td>
+    <td><%= mother.age %></td>
+    <td><%= link_to 'Show', mother %></td>
+    <td><%= link_to 'Edit', edit_mother_path(mother) %></td>
+    <td><%= link_to 'Destroy', mother, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<button type="button" class="btn btn-primary btn-lg"><%= link_to 'New Mother', new_mother_path %></button>
+<button type="button" class="btn btn-warning"><%= link_to 'Home', root_path %></button>
